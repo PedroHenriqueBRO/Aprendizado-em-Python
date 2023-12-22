@@ -63,6 +63,8 @@ nr_symbols = int(input("How many symbols would you like?\n"))
 nr_numbers = int(input("How many numbers would you like?\n"))
 SENHA = ""
 while True:
+    if nr_letters == 0 and nr_numbers == 0 and nr_symbols == 0:
+        break
     aleatoriedadelinha = r.randint(0, 2)
     if aleatoriedadelinha == 0 and nr_letters == 0:
         continue
@@ -79,6 +81,5 @@ while True:
         nr_numbers -= 1
     else:
         nr_symbols -= 1
-    if nr_letters == 0 and nr_numbers == 0 and nr_symbols == 0:
-        break
+
 print(SENHA)
